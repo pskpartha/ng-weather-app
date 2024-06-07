@@ -1,0 +1,32 @@
+.search-bar {
+    background-color: #ffffff;
+    position: relative;
+    width: 220px;
+    height: 36px;
+    border-radius: 25px;
+    margin-left: 10px;
+
+    .search-icon {
+        position: absolute;
+        top: 8px;
+        left: 14px;
+    }
+
+    .input {
+        position: absolute;
+        top: 8px;
+        left: 38px;
+        font-size: 14px;
+        background: none;
+        color: #5a6674;
+        width: 160px;
+        height: 20px;
+        border: none;
+        appearance: none;
+        outline: none;
+
+        &::-webkit-search-cancel-button {
+            appearance: none;
+        }
+    }
+}
