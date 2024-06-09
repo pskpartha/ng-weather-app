@@ -4,6 +4,10 @@
 :root {
     /* Box sizing border-box for all elements */
     box-sizing: border-box;
+    --primary-clr: #2f3542;
+    --light-clr: #747d8c;
+    --xtra-light-color: #f1f2f6;
+
 }
 
 *,
@@ -51,7 +55,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: #f1f2f6;
-    color: #2f3542;
+    color: var(--primary-clr);
 }
 
 /* A elements that don't have a class get default styles */
@@ -62,6 +66,7 @@ a:not([class]) {
 /* Make images easier to work with */
 img {
     max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -71,4 +76,17 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+/* Utilities */
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--xtra-light-color);
+    width: 100%;
+    margin: 20px auto;
+}
+
+.clr-lt {
+    color: var(--light-clr);
 }

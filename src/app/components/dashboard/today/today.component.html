@@ -1,0 +1,57 @@
+<section class="today">
+    <div class="title">
+        <h2>Today's</h2>
+    </div>
+    @if (todaysData()) {
+    <div class="highlights">
+        <div class="heading">
+            <div class="banner">
+                <img [src]="assetUrl+todaysData()?.icon+'_t@4x.png'" alt="" srcset="">
+            </div>
+            <div class="current-temp">
+                <span class="temp">
+                    {{todaysData()?.temperature?.current}}<span class="clr-lt sub">&deg;C</span>
+                </span>
+            </div>
+            <div class="current-status">
+                <p class="clr-lt">{{todaysData()?.weatherBrief}}</p>
+            </div>
+            <hr>
+            <div class="location">
+                <i class="bi bi-geo-alt"></i> {{todaysData()?.placeName
+                }}
+            </div>
+            <div class="date-time">
+                <i class="bi bi-alarm"></i>{{todaysData()!.date | formatTime
+                }}
+            </div>
+
+            <div class="date-time">
+                <i class="bi bi-balloon"></i>{{todaysData()!.date | formatDayName
+                }}
+            </div>
+            <div class="date-time">
+                <i class="bi bi-globe-americas"></i>{{todaysData()!.date | formatDate
+
+                }}
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="item">
+                <i class="bi bi-{{todaysData()?.wind?.icon}}"></i>
+                <div class="title">
+                    Wind speed
+                </div>
+                <div>
+                    <span class="value">{{todaysData()?.wind?.value}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    } @else {
+    <p>Data not found</p>
+    }
+    <!-- *ngIf="todaysData()" -->
+
+</section>

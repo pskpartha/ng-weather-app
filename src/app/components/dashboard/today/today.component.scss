@@ -1,0 +1,48 @@
+.today {
+    margin-bottom: 3rem;
+
+    .title {
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            opacity: .8;
+        }
+    }
+
+    .highlights {
+        display: flex;
+
+        .heading {
+            padding: 20px;
+            border-radius: 15px;
+            width: 240px;
+            background-color: #ffffff;
+
+            .current-temp {
+                display: flex;
+
+                .temp {
+                    font-size: 3rem;
+                    font-weight: 600;
+
+                    .sub {
+                        font-weight: 200;
+                    }
+                }
+            }
+
+            .current-status {
+                p {
+                    text-transform: capitalize;
+                }
+            }
+
+
+        }
+    }
+
+
+
+}
